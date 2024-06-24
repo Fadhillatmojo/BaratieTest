@@ -17,7 +17,7 @@ public class LoginObject {
         return By.name("password");
     }
     public By getButtonSubmit(){
-        return By.id("submit-btn");
+        return By.id("loginbtn");
     }
 
 }

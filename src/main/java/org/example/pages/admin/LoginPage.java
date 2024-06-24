@@ -41,4 +41,8 @@ public class LoginPage {
             throw new RuntimeException(e);
         }
     }
+    public String getActualUrl() {
+        return driver.getCurrentUrl();
+    }
+
 }

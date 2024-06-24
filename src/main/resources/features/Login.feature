@@ -1,6 +1,5 @@
-Feature:Login
+Feature:Login Admin PT. Baratie
   Scenario:Successful login with valid credentials
-    Given i am on the login page
-    When i sign in with correct credentials
-    Then i should redirected to the admin sertifikat page
-
+    Given admin on the login page
+    When admin sign in with correct credentials
+    Then admin should redirected to the admin Perusahaan page
