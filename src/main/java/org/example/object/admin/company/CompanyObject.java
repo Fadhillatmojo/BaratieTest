@@ -1,4 +1,4 @@
-package org.example.object.admin;
+package org.example.object.admin.company;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,5 +12,13 @@ public class CompanyObject {
 
     public By getButtonLogout(){
         return By.id("logoutbtn");
+    }
+
+    public By getButtonMenuTestimonial() {
+        return By.id("sidebar-testimonial");
+    }
+
+    public By getButtonSureLogout() {
+        return By.id("sure-logout");
     }
 }

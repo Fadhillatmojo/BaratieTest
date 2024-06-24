@@ -1,4 +1,4 @@
-package org.example.object.admin;
+package org.example.object.admin.sertifikat;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,5 +1,6 @@
 Feature:Login Admin PT. Baratie
-  Scenario:Successful login with valid credentials
+  Scenario:Success Login Admin
     Given admin on the login page
     When admin sign in with correct credentials
-    Then admin should redirected to the admin Perusahaan page
+    And admin clicks login button
+    Then admin should redirected to the dashboard Company page

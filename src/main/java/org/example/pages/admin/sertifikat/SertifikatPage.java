@@ -1,9 +1,8 @@
-package org.example.pages.admin;
+package org.example.pages.admin.sertifikat;
 
 
-import org.example.object.admin.SertifikatObject;
+import org.example.object.admin.sertifikat.SertifikatObject;
 import org.example.pages.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SertifikatPage {
