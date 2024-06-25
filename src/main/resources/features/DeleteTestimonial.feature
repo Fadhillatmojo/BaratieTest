@@ -7,11 +7,8 @@ Feature: Create Testimonial PT. Baratie
     When admin clicks testimonial menu
     Then admin must be directed to the testimonial page
 
-  Scenario: Create testimonial
+  Scenario: Delete testimonial
     Given admin in the testimonial page
-    When admin clicks button create testimonial
-    Then admin must be directed to the create testimonial page
-    When admin enters testimonial data
-    And admin clicks add testimonial button
-    Then admin must be directed again to the testimonial page
-    And the data must appear in table
+    When admin clicks button delete testimonial
+    And admin clicks button yes, im sure
+    Then the data must deleted from table
