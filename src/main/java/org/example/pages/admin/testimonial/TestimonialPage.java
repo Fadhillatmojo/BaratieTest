@@ -32,6 +32,14 @@ public class TestimonialPage {
             throw new RuntimeException(e);
         }
     }
+    public void clickEditButton(){
+        By buttonElement = testimonialObject.getButtonEdit();
+        try {
+            basePage.click(buttonElement);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public void clickDeleteButton() {
         By buttonElement = testimonialObject.getButtonDelete();
@@ -53,6 +61,17 @@ public class TestimonialPage {
         try {
             By dataTestimonial = testimonialObject.getDataTestimonial();
             WebElement data = driver.findElement(dataTestimonial);
+            return data.isDisplayed();
+        } catch (Exception e) {
+            // Log or handle the exception if needed
+            return false; // Return false if element is not found
+        }
+    }
+
+    public boolean isDataUpdated() {
+        try {
+            By updatedData = testimonialObject.getDataUpdated();
+            WebElement data = driver.findElement(updatedData);
             return data.isDisplayed();
         } catch (Exception e) {
             // Log or handle the exception if needed

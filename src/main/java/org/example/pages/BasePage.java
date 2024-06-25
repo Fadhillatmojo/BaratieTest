@@ -29,4 +29,7 @@ public class BasePage {
     public void inputText(By by, String text) throws InterruptedException {
         waitForElementVisible(by).sendKeys(text);
     }
+    public void clearText(By by) throws InterruptedException {
+        waitForElementVisible(by).clear();
+    }
 }

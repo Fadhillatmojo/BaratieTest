@@ -12,6 +12,9 @@ public class TestimonialObject {
     public By getButtonCreate(){
         return By.id("btn-create-testimonial");
     }
+    public By getButtonEdit(){
+        return By.id("btn-edit-5");
+    }
     public By getDataTestimonial(){
         return By.xpath("//*[contains(text(),'Firja')]");
     }
@@ -22,5 +25,9 @@ public class TestimonialObject {
 
     public By getButtonSureDelete() {
         return By.id("del-btn-5");
+    }
+
+    public By getDataUpdated() {
+        return By.xpath("//*[contains(text(),'Miftah')]");
     }
 }
