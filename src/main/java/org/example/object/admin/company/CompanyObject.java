@@ -17,8 +17,15 @@ public class CompanyObject {
     public By getButtonMenuTestimonial() {
         return By.id("sidebar-testimonial");
     }
+    public By getButtonEdit() {
+        return By.id("btn-edit-company");
+    }
 
     public By getButtonSureLogout() {
         return By.id("sure-logout");
+    }
+
+    public By getDataUpdated() {
+        return By.xpath("//*[contains(text(),'Baratie Corp After Update')]");
     }
 }

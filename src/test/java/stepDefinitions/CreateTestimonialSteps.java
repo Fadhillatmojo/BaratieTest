@@ -38,7 +38,7 @@ public class CreateTestimonialSteps {
             CompanyPage companyPage = new CompanyPage(driver);
             String expectedUrl = "http://127.0.0.1:8000/admin/company";
             Assert.assertEquals(expectedUrl, companyPage.getActualUrl());
-            Hooks.createTestimonialTest.pass("Fail to directed to create testimonial page");
+            Hooks.createTestimonialTest.pass("Success to directed to create testimonial page");
 
         } catch (Exception e) {
             Hooks.createTestimonialTest.fail("Fail to directed to create testimonial page");
@@ -95,7 +95,6 @@ public class CreateTestimonialSteps {
 
     @Then("admin must be directed to the create testimonial page")
     public void adminMustBeDirectedToTheCreateTestimonialPage() {
-
         try{
             CreateTestimonialPage createTestimonialPage = new CreateTestimonialPage(driver);
             String expectedUrl = "http://127.0.0.1:8000/admin/testimonial/create";

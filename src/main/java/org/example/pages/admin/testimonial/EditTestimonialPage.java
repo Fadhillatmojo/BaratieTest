@@ -64,4 +64,8 @@ public class EditTestimonialPage {
         }
     }
 
+    public String getActualUrl() {
+        return driver.getCurrentUrl();
+    }
+
 }
