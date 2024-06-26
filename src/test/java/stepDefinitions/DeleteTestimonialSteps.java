@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.admin.company.CompanyPage;
 import org.example.pages.admin.testimonial.TestimonialPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -15,19 +14,34 @@ public class DeleteTestimonialSteps {
     }
     @When("admin clicks button delete testimonial")
     public void adminClicksButtonDeleteTestimonial() {
-        TestimonialPage testimonialPage = new TestimonialPage(driver);
-        testimonialPage.clickDeleteButton();
+        try {
+            TestimonialPage testimonialPage = new TestimonialPage(driver);
+            testimonialPage.clickDeleteButton();
+            Hooks.deleteTestimonialTest.pass("Admin Success to click button delete testimonial");
+        } catch (Exception e) {
+            Hooks.deleteTestimonialTest.fail("Admin Fail to click button delete testimonial");
+        }
     }
 
     @And("admin clicks button yes, im sure")
     public void adminClicksButtonYesImSure() {
-        TestimonialPage testimonialPage = new TestimonialPage(driver);
-        testimonialPage.clickSureDelete();
+        try {
+            TestimonialPage testimonialPage = new TestimonialPage(driver);
+            testimonialPage.clickSureDelete();
+            Hooks.deleteTestimonialTest.pass("Admin Success to click button sure delete");
+        } catch (Exception e) {
+            Hooks.deleteTestimonialTest.fail("Admin Fail to click button sure delete");
+        }
     }
 
     @Then("the data must deleted from table")
     public void theDataMustDeletedFromTable() {
-        TestimonialPage testimonialPage = new TestimonialPage(driver);
-        Assert.assertFalse(testimonialPage.isDataDisplayed());
+        try {
+            TestimonialPage testimonialPage = new TestimonialPage(driver);
+            Assert.assertFalse(testimonialPage.isDataDisplayed());
+            Hooks.deleteTestimonialTest.pass("Data Success to deleted");
+        } catch (Exception e) {
+            Hooks.deleteTestimonialTest.fail("Data Fail to deleted");
+        }
     }
 }

@@ -22,9 +22,14 @@ public class UpdateTestimonialSteps {
 
     @Then("admin must be directed to the edit testimonial page")
     public void adminMustBeDirectedToTheEditTestimonialPage() {
-        TestimonialPage testimonialPage = new TestimonialPage(driver);
-        String expectedUrl = "http://127.0.0.1:8000/admin/testimonial/5/edit";
-        Assert.assertEquals(expectedUrl, testimonialPage.getActualUrl());
+        try {
+            TestimonialPage testimonialPage = new TestimonialPage(driver);
+            String expectedUrl = "http://127.0.0.1:8000/admin/testimonial/5/edit";
+            Assert.assertEquals(expectedUrl, testimonialPage.getActualUrl());
+            Hooks.deleteTestimonialTest.pass("Admin Success to click button sure delete");
+        } catch (Exception e) {
+            Hooks.deleteTestimonialTest.fail("Admin Fail to click button sure delete");
+        }
     }
 
     @When("admin enters testimonial data to update")

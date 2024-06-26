@@ -1,4 +1,4 @@
-Feature: Create Testimonial PT. Baratie
+Feature: Delete Testimonial PT. Baratie
 
   Background: Admin Logged in and in the testimonial page
     Given admin on the login page
